@@ -43,7 +43,7 @@ function renderUsers(users) {
     const root = document.querySelector('#root');
     let html = '';
     users.forEach(user => {
-        html += `<p onclick="getPassword('${user.name}')">Name: ${user.name}</p>`
+        html += `<p onclick="getPassword('${user.name}')">Name: ${user.name} password:${user.password}</p>`
     })
 
     root.innerHTML = html
