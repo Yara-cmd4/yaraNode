@@ -64,7 +64,7 @@ function renderUsers(users) {
     let html = '';
     users.forEach(user => {
         
-        html += `<
+        html += `
         <p onclick="getPassword('${user.name}')">Name: ${user.name} password:${user.password}</p>`
     })
 
