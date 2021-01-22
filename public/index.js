@@ -15,6 +15,7 @@ function getUsers(e){
 }
 
 function renderUsers(users){
+    const root=document.querySelector('#root');
     let html = '';
     users.forEach(user=>{
         html += `<p>Name: ${user.name}</p>`
