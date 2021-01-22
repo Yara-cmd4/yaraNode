@@ -26,6 +26,18 @@ app.get('/get-password',(req, res)=>{
     res.send({password:usr.password})
   })
   
+  
+  app.post('/login',(req, res)=>{
+  
+    console.log(req.body) //get the data
+    const {name, password} = req.body;
+  
+    users.push({name, password})
+  
+    res.send({ok:true})
+  })
+  
+   
 const port = process.env.PORT || 3000;
 app.listen(port,function(){
     console.log('listening',port)

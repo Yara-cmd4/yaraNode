@@ -6,11 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+
     <h1>Login</h1>
-    name:<input type="text">
-    password:<input type="text">
+    
+    
     <button onclick="Login()">Login</button>
     <div id="root"></div>
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" name="name">
+        <input type="text" name="password">
+        <input type="submit" value='send'>
+    </form>
 </body>
 <script src="index.js"></script>
 </html>
