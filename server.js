@@ -10,6 +10,7 @@ const users = [
   {name:'Yara', id:'333333333',password:'1234'},
   {name:'Ihab', id:'444444',password:'12345'}
 ]
+users+={name:'ksfj',id:'983',password:'122'}
 
 //route
 app.get('/get-users',(req, res)=>{
@@ -39,7 +40,7 @@ app.get('/get-password',(req, res)=>{
   
    
 const port = process.env.PORT || 3000;
-const port = process.env.PORT || 3002;
+
 app.listen(port,function(){
     console.log('listening',port)
 })

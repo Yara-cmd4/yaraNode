@@ -37,6 +37,13 @@ function getPassword(name) {
         })
     console.log('after fetch')
 }
+function Add(e){
+
+}
+function Show(){
+    
+}
+/*
 function handleSubmit(e) {
     e.preventDefault();
 
@@ -44,10 +51,13 @@ function handleSubmit(e) {
 
     let { name, password } = e.target.elements;
 
-    name = name.value;
+    n = name.value;
     password = password.value;
     console.log(name, password);
-
+    i=getPassword(n)
+    if(i===password){
+        console.log('hi')
+    }
     fetch('/login', {
         method: 'POST',
         headers: {
@@ -58,7 +68,7 @@ function handleSubmit(e) {
             console.log(data)
         })
 }
-
+*/
 function renderUsers(users) {
     const root = document.querySelector('#root');
     let html = '';
