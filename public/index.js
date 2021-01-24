@@ -37,9 +37,7 @@ function getPassword(name) {
         })
     console.log('after fetch')
 }
-function Add(e){
- 
-}
+
 function Show(){
 
 }
