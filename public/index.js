@@ -43,10 +43,8 @@ function Show(){
 }
 
 function Add(e) {
-    e.preventDefault();
-
-
-
+    e.preventDefault();v 
+    
     let {url} = e.target.elements;
     url=url.value;
     
