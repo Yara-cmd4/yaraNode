@@ -8,8 +8,13 @@
 <body>
 
     <h1>Login</h1>
-    <input type="text" name="url" value="image url">
-    <button onclick="Add()">Add</button>
+    <input type="text" id="url" name="url" value="image url">
+    <form onsubmit="Add()">
+        <input type="text" name="url">
+        
+        <input type="submit" value='add'>
+    </form>
+    
     <button onclick="Show()">Show images</button>
     <button onclick="getUsers()">Login</button>
     <div id="root"></div>

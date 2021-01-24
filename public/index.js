@@ -38,44 +38,40 @@ function getPassword(name) {
     console.log('after fetch')
 }
 function Add(e){
-
+ 
 }
 function Show(){
-    
+
 }
-/*
-function handleSubmit(e) {
+
+function Add(e) {
     e.preventDefault();
 
 
 
-    let { name, password } = e.target.elements;
-
-    n = name.value;
-    password = password.value;
-    console.log(name, password);
-    i=getPassword(n)
-    if(i===password){
-        console.log('hi')
-    }
+    let {url} = e.target.elements;
+    url=url.value;
+    
+    console.log(url);
+    
     fetch('/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
-        }, body: JSON.stringify({ name, password })
+        }, body: JSON.stringify({ url })
     }).then(r => r.json())
         .then(data => {
             console.log(data)
         })
 }
-*/
+
 function renderUsers(users) {
     const root = document.querySelector('#root');
     let html = '';
     users.forEach(user => {
         
         html += `
-        <p onclick="getPassword('${user.name}')">Name: ${user.name} password:${user.password}</p>`
+        <p >Name: ${user.url}</p>`
     })
 
     root.innerHTML = html

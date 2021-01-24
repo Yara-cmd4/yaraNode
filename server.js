@@ -11,10 +11,10 @@ const users = [
   {name:'Ihab', id:'444444',password:'12345'}
 ]
 users.push({name:'ksfj',id:'983',password:'122'});
-
+const images=[]
 //route
 app.get('/get-users',(req, res)=>{
-  res.send(users)
+  res.send(images)
 })
 
 app.get('/get-password',(req, res)=>{
@@ -31,9 +31,9 @@ app.get('/get-password',(req, res)=>{
   app.post('/login',(req, res)=>{
   
     console.log(req.body) //get the data
-    const {name, password} = req.body;
+    const {url} = req.body;
   
-    users.push({name, password})
+    images.push({url})
   
     res.send({ok:true})
   })
