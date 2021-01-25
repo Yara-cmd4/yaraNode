@@ -1,3 +1,4 @@
+import './index.css';
 document.querySelector('h1').style.background = 'pink';
 const root = document.querySelector('#root')
 
@@ -13,34 +14,23 @@ function getUsers(e){
     })
     console.log('after fetch')
 }
-function Login(e){
-    fetch('/get-users')
+
+
+
+
+
+function Show(e){
+    console.log('get images')
+
+    fetch('/get-images')
     .then(r=>r.json())
     .then(data=>{
-        
-        renderUsers(data)
-            
+        console.log('then')
+        renderImages(data)
     })
-}
-
-function renderpass(users){
-
-}
-function getPassword(name) {
-    console.log('get password', name)
-
-    fetch(`/get-password?name=${name}`)
-        .then(r => r.json())
-        .then(pass => {
-
-            console.log(pass.password)
-        })
     console.log('after fetch')
 }
 
-function Show(){
-
-}
 
 function Add(e) {
     e.preventDefault();
@@ -61,7 +51,26 @@ function Add(e) {
         })
         
 }
+function renderImages(images){
+    const root = document.querySelector('#root');
+    let html = '';
+    images.forEach(image => {
+        html += `<p onclick="show('${image.url}')"><img src="${image.url}"></p>`
+    })
 
+    root.innerHTML = html
+}
+function getImages(url) {
+    console.log('get url', url)
+
+    fetch(`/get-images`)
+        .then(r => r.json())
+        .then(pass => {
+
+            console.log()
+        })
+    console.log('after fetch')
+}
 function renderUsers(users) {
     const root = document.querySelector('#root');
     let html = '';

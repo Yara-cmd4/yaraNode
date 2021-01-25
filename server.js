@@ -1,10 +1,10 @@
 const express=require('express')
-
+var bodyParser = require('body-parser')
 const app = express();
 
 
 app.use(express.static('public'));
-
+app.use(bodyParser.json())
 const users = [
   {name:'Kilani', id:'2222',password:'123'},
   {name:'Yara', id:'333333333',password:'1234'},
@@ -16,7 +16,9 @@ const images=[]
 app.get('/get-users',(req, res)=>{
   res.send(images)
 })
-
+app.get('/get-images' ,(req,res)=>{
+ res.send(images)
+})
 app.get('/get-password',(req, res)=>{
     const {name} =req.query;
   
