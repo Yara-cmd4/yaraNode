@@ -43,9 +43,9 @@ function Show(){
 }
 
 function Add(e) {
-    e.preventDefault();v 
+    e.preventDefault();
     
-    let {url} = e.target.elements;
+    var url= document.getElementById('url');;
     url=url.value;
     
     console.log(url);
@@ -59,6 +59,7 @@ function Add(e) {
         .then(data => {
             console.log(data)
         })
+        
 }
 
 function renderUsers(users) {

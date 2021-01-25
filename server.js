@@ -3,7 +3,7 @@ const express=require('express')
 const app = express();
 
 
-app.use(express.static('rct/build'));
+app.use(express.static('public'));
 
 const users = [
   {name:'Kilani', id:'2222',password:'123'},
