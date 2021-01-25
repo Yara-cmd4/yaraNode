@@ -12,7 +12,15 @@ const users = [
 ]
 users.push({name:'ksfj',id:'983',password:'122'});
 const images=[]
+var id=0;
 //route
+const stars=[
+  {num:'1',star:''},
+  {num:'2',star:''},
+  {num:'3',star:''},
+  {num:'4',star:''},
+  {num:'5',star:''}
+]
 app.get('/get-users',(req, res)=>{
   res.send(images)
 })
@@ -31,15 +39,17 @@ app.get('/get-password',(req, res)=>{
   
   
   app.post('/login',(req, res)=>{
-  
+    id+=1;
     console.log(req.body) //get the data
     const {url} = req.body;
   
-    images.push({url})
-  
+    images.push({url,id})
+    images.sort();
     res.send({ok:true})
   })
-  
+  app.post('/sort',(req,res)=>{
+    images.sort();
+  })
    
 const port = process.env.PORT || 3000;
 

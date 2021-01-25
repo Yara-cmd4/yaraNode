@@ -1,4 +1,4 @@
-import './index.css';
+
 document.querySelector('h1').style.background = 'pink';
 const root = document.querySelector('#root')
 
@@ -35,7 +35,7 @@ function Show(e){
 function Add(e) {
     e.preventDefault();
     
-    var url= document.getElementById('url');;
+    var url= document.getElementById('url');
     url=url.value;
     
     console.log(url);
@@ -49,14 +49,23 @@ function Add(e) {
         .then(data => {
             console.log(data)
         })
-        
+    document.getElementById('url').value="";    
 }
 function renderImages(images){
     const root = document.querySelector('#root');
     let html = '';
+    //var num=0;
+    //const imagess=[];
+    
     images.forEach(image => {
-        html += `<p onclick="show('${image.url}')"><img src="${image.url}"></p>`
+        
+      //  num+=1;
+       
+        html += `<p onclick="show('${image.url}')">${image.id}<img style="width:100px;height:100px" src="${image.url}"></p>`
+        //imagess.push({image})
     })
+    
+   
 
     root.innerHTML = html
 }
