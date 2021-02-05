@@ -43,8 +43,8 @@ app.get('/get-password',(req, res)=>{
     console.log(req.body) //get the data
     const {url} = req.body;
   
-    images.push({url,id})
-    images.sort();
+    images.push({url})
+   // images.sort();
     res.send({ok:true})
   })
   app.post('/sort',(req,res)=>{

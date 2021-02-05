@@ -61,7 +61,7 @@ function renderImages(images){
         
       //  num+=1;
        
-        html += `<p onclick="show('${image.url}')">${image.id}<img style="width:100px;height:100px" src="${image.url}"></p>`
+        html += `<p onclick="show('${image.url}')"><img style="width:100px;height:100px" src="${image.url}"></p>`
         //imagess.push({image})
     })
     
